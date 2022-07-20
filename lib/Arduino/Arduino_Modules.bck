@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP HX711
+D ADC for load cells
+$ENDCMP
+#
+#End Doc Library

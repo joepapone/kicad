@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/joe/KiCAD/Scale/Scale.sch</source>
+    <date>Sun 17 Jul 2022 15:00:53 WEST</date>
+    <tool>Eeschema 5.1.5+dfsg1-2build2</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Weighing and Access System</title>
+        <company>Ferreira Bros.</company>
+        <rev>1.0</rev>
+        <date>2022-07-16</date>
+        <source>Scale.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value="J3 - Connection to RFID module"/>
+        <comment number="3" value="J2 - Connection to relay module"/>
+        <comment number="4" value="J1 - Connection to load cells"/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J3">
+      <value>Conn_01x07_Female</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x07_Female" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62D29C17</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x03_Female</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x03_Female" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62D2AAB4</tstamp>
+    </comp>
+    <comp ref="A1">
+      <value>Arduino_Nano_v3.x</value>
+      <footprint>Module:Arduino_Nano</footprint>
+      <datasheet>http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf</datasheet>
+      <libsource lib="MCU_Module" part="Arduino_Nano_v3.x" description="Arduino Nano v3.x"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62CF428F</tstamp>
+    </comp>
+    <comp ref="A3">
+      <value>HX711</value>
+      <footprint>Arduino_Modules:HX711_Module</footprint>
+      <datasheet>-</datasheet>
+      <libsource lib="Arduino_Modules" part="HX711" description="ADC for load cells"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62D2F06D</tstamp>
+    </comp>
+    <comp ref="A2">
+      <value>Arduino_MKR_ETH</value>
+      <footprint>Arduino_Modules:MKR_ETH_Shield</footprint>
+      <datasheet>-</datasheet>
+      <libsource lib="Arduino_Shields" part="Arduino_MKR_ETH" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62D2204F</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x04_Female</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Female" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62E179A4</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Arduino_Modules" part="HX711">
+      <description>ADC for load cells</description>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">HX711</field>
+        <field name="Footprint">Arduino_Modules:HX711_Module</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E+" type="power_out"/>
+        <pin num="2" name="E-" type="power_out"/>
+        <pin num="3" name="A-" type="BiDi"/>
+        <pin num="4" name="A+" type="BiDi"/>
+        <pin num="7" name="+3V3" type="power_in"/>
+        <pin num="8" name="SCK" type="input"/>
+        <pin num="9" name="DT" type="output"/>
+        <pin num="10" name="GND" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Arduino_Shields" part="Arduino_MKR_ETH">
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">Arduino_MKR_ETH</field>
+        <field name="Footprint">Arduino_Modules:MKR_ETH_Shield</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D6" type="BiDi"/>
+        <pin num="2" name="D7" type="BiDi"/>
+        <pin num="3" name="MOSI" type="output"/>
+        <pin num="4" name="SCK" type="input"/>
+        <pin num="5" name="MISO" type="input"/>
+        <pin num="6" name="SDA" type="input"/>
+        <pin num="7" name="SCL" type="input"/>
+        <pin num="8" name="RX" type="BiDi"/>
+        <pin num="9" name="TX" type="BiDi"/>
+        <pin num="10" name="~RST" type="input"/>
+        <pin num="11" name="GND" type="power_in"/>
+        <pin num="12" name="VCC" type="power_out"/>
+        <pin num="13" name="VIN" type="power_in"/>
+        <pin num="14" name="+5v" type="power_in"/>
+        <pin num="15" name="AREF" type="BiDi"/>
+        <pin num="16" name="DACO/A0" type="BiDi"/>
+        <pin num="17" name="A1" type="BiDi"/>
+        <pin num="18" name="A2" type="BiDi"/>
+        <pin num="19" name="A3" type="BiDi"/>
+        <pin num="20" name="A4" type="BiDi"/>
+        <pin num="21" name="A5" type="BiDi"/>
+        <pin num="22" name="A6" type="BiDi"/>
+        <pin num="23" name="D0" type="BiDi"/>
+        <pin num="24" name="D1" type="BiDi"/>
+        <pin num="25" name="D2" type="BiDi"/>
+        <pin num="26" name="D3" type="BiDi"/>
+        <pin num="27" name="D4/CS_SD" type="BiDi"/>
+        <pin num="28" name="D5/CD_ETH" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x03_Female">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x04_Female">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x07_Female">
+      <description>Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x07_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Module" part="Arduino_Nano_v2.x">
+      <aliases>
+        <alias>Arduino_Nano_v3.x</alias>
+      </aliases>
+      <description>Arduino Nano v2.x</description>
+      <docs>https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf</docs>
+      <footprints>
+        <fp>Arduino*Nano*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">Arduino_Nano_v2.x</field>
+        <field name="Footprint">Module:Arduino_Nano</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D1/TX" type="BiDi"/>
+        <pin num="2" name="D0/RX" type="BiDi"/>
+        <pin num="3" name="~RESET" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="D2" type="BiDi"/>
+        <pin num="6" name="D3" type="BiDi"/>
+        <pin num="7" name="D4" type="BiDi"/>
+        <pin num="8" name="D5" type="BiDi"/>
+        <pin num="9" name="D6" type="BiDi"/>
+        <pin num="10" name="D7" type="BiDi"/>
+        <pin num="11" name="D8" type="BiDi"/>
+        <pin num="12" name="D9" type="BiDi"/>
+        <pin num="13" name="D10" type="BiDi"/>
+        <pin num="14" name="D11" type="BiDi"/>
+        <pin num="15" name="D12" type="BiDi"/>
+        <pin num="16" name="D13" type="BiDi"/>
+        <pin num="17" name="3V3" type="power_out"/>
+        <pin num="18" name="AREF" type="input"/>
+        <pin num="19" name="A0" type="BiDi"/>
+        <pin num="20" name="A1" type="BiDi"/>
+        <pin num="21" name="A2" type="BiDi"/>
+        <pin num="22" name="A3" type="BiDi"/>
+        <pin num="23" name="A4" type="BiDi"/>
+        <pin num="24" name="A5" type="BiDi"/>
+        <pin num="25" name="A6" type="BiDi"/>
+        <pin num="26" name="A7" type="BiDi"/>
+        <pin num="27" name="+5V" type="power_out"/>
+        <pin num="28" name="~RESET" type="input"/>
+        <pin num="29" name="GND" type="power_in"/>
+        <pin num="30" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Arduino_Modules">
+      <uri>/home/joe/KiCAD/lib/Arduino/Arduino_Modules.lib</uri>
+    </library>
+    <library logical="Arduino_Shields">
+      <uri>/home/joe/KiCAD/lib/Arduino/Arduino_Shields.lib</uri>
+    </library>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
+    </library>
+    <library logical="MCU_Module">
+      <uri>/usr/share/kicad/library/MCU_Module.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(A1-Pad25)">
+      <node ref="A1" pin="25"/>
+    </net>
+    <net code="2" name="Net-(A2-Pad10)">
+      <node ref="A2" pin="10"/>
+    </net>
+    <net code="3" name="Net-(A2-Pad22)">
+      <node ref="A2" pin="22"/>
+    </net>
+    <net code="4" name="Net-(A2-Pad21)">
+      <node ref="A2" pin="21"/>
+    </net>
+    <net code="5" name="Net-(A2-Pad20)">
+      <node ref="A2" pin="20"/>
+    </net>
+    <net code="6" name="Net-(A2-Pad19)">
+      <node ref="A2" pin="19"/>
+    </net>
+    <net code="7" name="Net-(A2-Pad18)">
+      <node ref="A2" pin="18"/>
+    </net>
+    <net code="8" name="Net-(A2-Pad16)">
+      <node ref="A2" pin="16"/>
+    </net>
+    <net code="9" name="Net-(A2-Pad17)">
+      <node ref="A2" pin="17"/>
+    </net>
+    <net code="10" name="Net-(A2-Pad15)">
+      <node ref="A2" pin="15"/>
+    </net>
+    <net code="11" name="Net-(A2-Pad13)">
+      <node ref="A2" pin="13"/>
+    </net>
+    <net code="12" name="Net-(A2-Pad12)">
+      <node ref="A2" pin="12"/>
+    </net>
+    <net code="13" name="Net-(A1-Pad26)">
+      <node ref="A1" pin="26"/>
+    </net>
+    <net code="14" name="Net-(A2-Pad7)">
+      <node ref="A2" pin="7"/>
+    </net>
+    <net code="15" name="Net-(A1-Pad24)">
+      <node ref="A1" pin="24"/>
+    </net>
+    <net code="16" name="Net-(A1-Pad23)">
+      <node ref="A1" pin="23"/>
+    </net>
+    <net code="17" name="Net-(A1-Pad22)">
+      <node ref="A1" pin="22"/>
+    </net>
+    <net code="18" name="Net-(A1-Pad21)">
+      <node ref="A1" pin="21"/>
+    </net>
+    <net code="19" name="Net-(A1-Pad18)">
+      <node ref="A1" pin="18"/>
+    </net>
+    <net code="20" name="Net-(A1-Pad3)">
+      <node ref="A1" pin="3"/>
+    </net>
+    <net code="21" name="Net-(A1-Pad28)">
+      <node ref="A1" pin="28"/>
+    </net>
+    <net code="22" name="Net-(A1-Pad30)">
+      <node ref="A1" pin="30"/>
+    </net>
+    <net code="23" name="Net-(A1-Pad2)">
+      <node ref="A1" pin="2"/>
+    </net>
+    <net code="24" name="Net-(A1-Pad1)">
+      <node ref="A1" pin="1"/>
+    </net>
+    <net code="25" name="Net-(A1-Pad6)">
+      <node ref="A1" pin="6"/>
+    </net>
+    <net code="26" name="Net-(A1-Pad12)">
+      <node ref="J3" pin="4"/>
+      <node ref="A1" pin="12"/>
+    </net>
+    <net code="27" name="Net-(A1-Pad16)">
+      <node ref="J3" pin="7"/>
+      <node ref="A1" pin="16"/>
+      <node ref="A2" pin="4"/>
+    </net>
+    <net code="28" name="Net-(A1-Pad15)">
+      <node ref="J3" pin="6"/>
+      <node ref="A1" pin="15"/>
+      <node ref="A2" pin="5"/>
+    </net>
+    <net code="29" name="Net-(A1-Pad14)">
+      <node ref="J3" pin="5"/>
+      <node ref="A1" pin="14"/>
+      <node ref="A2" pin="3"/>
+    </net>
+    <net code="30" name="Net-(A1-Pad9)">
+      <node ref="A1" pin="9"/>
+    </net>
+    <net code="31" name="Net-(A1-Pad11)">
+      <node ref="A1" pin="11"/>
+      <node ref="J3" pin="3"/>
+    </net>
+    <net code="32" name="Net-(A2-Pad8)">
+      <node ref="A2" pin="8"/>
+    </net>
+    <net code="33" name="Net-(A2-Pad9)">
+      <node ref="A2" pin="9"/>
+    </net>
+    <net code="34" name="Net-(A2-Pad23)">
+      <node ref="A2" pin="23"/>
+    </net>
+    <net code="35" name="Net-(A2-Pad24)">
+      <node ref="A2" pin="24"/>
+    </net>
+    <net code="36" name="Net-(A2-Pad1)">
+      <node ref="A2" pin="1"/>
+    </net>
+    <net code="37" name="Net-(A2-Pad6)">
+      <node ref="A2" pin="6"/>
+    </net>
+    <net code="38" name="Net-(A2-Pad25)">
+      <node ref="A2" pin="25"/>
+    </net>
+    <net code="39" name="Net-(A3-Pad2)">
+      <node ref="A3" pin="2"/>
+      <node ref="J1" pin="4"/>
+    </net>
+    <net code="40" name="Net-(A3-Pad3)">
+      <node ref="A3" pin="3"/>
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="41" name="Net-(A1-Pad5)">
+      <node ref="J2" pin="2"/>
+      <node ref="A1" pin="5"/>
+    </net>
+    <net code="43" name="Net-(A1-Pad10)">
+      <node ref="A1" pin="10"/>
+      <node ref="A2" pin="28"/>
+    </net>
+    <net code="44" name="Net-(A1-Pad8)">
+      <node ref="A1" pin="8"/>
+    </net>
+    <net code="45" name="Net-(A2-Pad2)">
+      <node ref="A2" pin="2"/>
+    </net>
+    <net code="46" name="Net-(A1-Pad13)">
+      <node ref="A1" pin="13"/>
+    </net>
+    <net code="47" name="Net-(A2-Pad26)">
+      <node ref="A2" pin="26"/>
+    </net>
+    <net code="48" name="Net-(A1-Pad7)">
+      <node ref="A1" pin="7"/>
+      <node ref="A2" pin="27"/>
+    </net>
+    <net code="49" name="Net-(A3-Pad4)">
+      <node ref="A3" pin="4"/>
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="50" name="Net-(A3-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="A3" pin="1"/>
+    </net>
+    <net code="51" name="GND">
+      <node ref="A1" pin="29"/>
+      <node ref="A1" pin="4"/>
+      <node ref="A3" pin="10"/>
+      <node ref="A2" pin="11"/>
+      <node ref="J3" pin="2"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="52" name="Net-(A1-Pad20)">
+      <node ref="A1" pin="20"/>
+      <node ref="A3" pin="9"/>
+    </net>
+    <net code="53" name="Net-(A1-Pad17)">
+      <node ref="A1" pin="17"/>
+      <node ref="A3" pin="7"/>
+      <node ref="J3" pin="1"/>
+    </net>
+    <net code="54" name="Net-(A1-Pad19)">
+      <node ref="A3" pin="8"/>
+      <node ref="A1" pin="19"/>
+    </net>
+    <net code="55" name="Net-(A1-Pad27)">
+      <node ref="A2" pin="14"/>
+      <node ref="A1" pin="27"/>
+      <node ref="J2" pin="1"/>
+    </net>
+  </nets>
+</export>

@@ -1,0 +1,392 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Weighing and Access System"
+Date "2022-07-16"
+Rev "1.0"
+Comp "Ferreira Bros."
+Comment1 ""
+Comment2 "J3 - Connection to RFID module"
+Comment3 "J2 - Connection to relay module"
+Comment4 "J1 - Connection to load cells"
+$EndDescr
+$Comp
+L power:GND #PWR0101
+U 1 1 62D45FE4
+P 7500 4100
+F 0 "#PWR0101" H 7500 3850 50  0001 C CNN
+F 1 "GND" H 7505 3927 50  0000 C CNN
+F 2 "" H 7500 4100 50  0001 C CNN
+F 3 "" H 7500 4100 50  0001 C CNN
+	1    7500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x07_Female J3
+U 1 1 62D29C17
+P 3800 4550
+F 0 "J3" H 3900 4550 50  0000 C CNN
+F 1 "Conn_01x07_Female" H 3800 5000 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" H 3800 4550 50  0001 C CNN
+F 3 "~" H 3800 4550 50  0001 C CNN
+	1    3800 4550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J2
+U 1 1 62D2AAB4
+P 3750 2150
+F 0 "J2" H 3850 2150 50  0000 C CNN
+F 1 "Conn_01x03_Female" H 3750 2400 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 3750 2150 50  0001 C CNN
+F 3 "~" H 3750 2150 50  0001 C CNN
+	1    3750 2150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 62CF428F
+P 7500 2500
+F 0 "A1" H 7500 2500 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 8200 3500 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 7500 2500 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 7500 2500 50  0001 C CNN
+	1    7500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Modules:HX711 A3
+U 1 1 62D2F06D
+P 9350 2500
+F 0 "A3" H 9350 2500 50  0000 R CNN
+F 1 "HX711" H 9050 3000 50  0000 R CNN
+F 2 "Arduino_Modules:HX711_Module" H 9350 2500 50  0001 C CNN
+F 3 "-" H 9350 2500 50  0001 C CNN
+	1    9350 2500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Arduino_Shields:Arduino_MKR_ETH A2
+U 1 1 62D2204F
+P 5400 2600
+F 0 "A2" H 5400 2750 50  0000 C CNN
+F 1 "Arduino_MKR_ETH" H 4850 3600 50  0000 C CNN
+F 2 "Arduino_Modules:MKR_ETH_Shield" H 6200 3500 50  0001 C CNN
+F 3 "-" H 6200 3500 50  0001 C CNN
+	1    5400 2600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3200 6650 3200
+Wire Wire Line
+	5900 3100 6550 3100
+Wire Wire Line
+	5900 3000 6450 3000
+Wire Wire Line
+	6050 2600 6050 2300
+Wire Wire Line
+	6050 2300 7000 2300
+Wire Wire Line
+	5200 1150 5200 1600
+Wire Wire Line
+	8000 2500 8950 2500
+Wire Wire Line
+	8000 2600 8950 2600
+Wire Wire Line
+	5200 1150 7700 1150
+Wire Wire Line
+	7700 1150 7700 1500
+Wire Wire Line
+	7600 1500 7600 1250
+Wire Wire Line
+	7600 1250 9350 1250
+Wire Wire Line
+	9350 1250 9350 2000
+Wire Wire Line
+	5200 1150 4400 1150
+Wire Wire Line
+	4400 1150 4400 2050
+Wire Wire Line
+	4400 2050 3950 2050
+Connection ~ 5200 1150
+Wire Wire Line
+	4500 1250 4500 2150
+Wire Wire Line
+	3950 2250 4500 2250
+Wire Wire Line
+	4000 4350 4500 4350
+Wire Wire Line
+	4000 4850 6650 4850
+Wire Wire Line
+	6650 4850 6650 3200
+Connection ~ 6650 3200
+Wire Wire Line
+	6650 3200 7000 3200
+Wire Wire Line
+	4000 4750 6550 4750
+Wire Wire Line
+	6550 4750 6550 3100
+Connection ~ 6550 3100
+Wire Wire Line
+	6550 3100 7000 3100
+Wire Wire Line
+	4000 4650 6450 4650
+Wire Wire Line
+	6450 4650 6450 3000
+Connection ~ 6450 3000
+Wire Wire Line
+	6450 3000 7000 3000
+Wire Wire Line
+	4000 4550 6350 4550
+Wire Wire Line
+	6350 4550 6350 2800
+Wire Wire Line
+	6350 2800 7000 2800
+Wire Wire Line
+	7000 2700 6250 2700
+Wire Wire Line
+	6250 2700 6250 4450
+Wire Wire Line
+	6250 4450 4000 4450
+NoConn ~ 5900 2000
+NoConn ~ 5900 2100
+NoConn ~ 5900 2200
+NoConn ~ 5900 2300
+NoConn ~ 5900 2800
+NoConn ~ 4900 3200
+NoConn ~ 4900 3100
+NoConn ~ 4900 3000
+NoConn ~ 4900 2800
+NoConn ~ 4900 2700
+NoConn ~ 4900 2600
+NoConn ~ 4900 2500
+NoConn ~ 4900 2400
+NoConn ~ 4900 2200
+NoConn ~ 4900 2300
+NoConn ~ 4900 2000
+NoConn ~ 5600 1600
+NoConn ~ 5500 1600
+NoConn ~ 8000 3200
+NoConn ~ 8000 3100
+NoConn ~ 8000 3000
+NoConn ~ 8000 2900
+NoConn ~ 8000 2800
+NoConn ~ 8000 2700
+NoConn ~ 8000 2300
+NoConn ~ 8000 2000
+NoConn ~ 8000 1900
+NoConn ~ 7400 1500
+NoConn ~ 7000 1900
+NoConn ~ 7000 2000
+NoConn ~ 7000 2200
+NoConn ~ 7000 2500
+NoConn ~ 7000 2900
+Wire Wire Line
+	4500 2250 4500 3800
+Connection ~ 7500 3800
+Wire Wire Line
+	7500 3500 7500 3800
+Wire Wire Line
+	7500 3800 7500 4100
+Connection ~ 4500 3800
+Wire Wire Line
+	4500 4350 4500 3800
+Wire Wire Line
+	9350 3000 9350 3800
+Wire Wire Line
+	7600 3500 7600 3800
+Wire Wire Line
+	7600 3800 9350 3800
+Connection ~ 7600 3800
+Wire Wire Line
+	7500 3800 7600 3800
+NoConn ~ 5900 2500
+Wire Wire Line
+	5900 2600 6050 2600
+$Comp
+L Connector:Conn_01x04_Female J1
+U 1 1 62E179A4
+P 10600 2500
+F 0 "J1" H 10628 2476 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 10300 2750 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 10600 2500 50  0001 C CNN
+F 3 "~" H 10600 2500 50  0001 C CNN
+	1    10600 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 2500 10400 2500
+Wire Wire Line
+	9450 2000 9450 1800
+Wire Wire Line
+	9450 1800 10100 1800
+Wire Wire Line
+	10100 1800 10100 2400
+Wire Wire Line
+	10100 2400 10400 2400
+Wire Wire Line
+	9450 3000 9450 3200
+Wire Wire Line
+	9450 3200 10100 3200
+Wire Wire Line
+	10100 3200 10100 2700
+Wire Wire Line
+	9750 2600 10400 2600
+Wire Wire Line
+	10400 2700 10100 2700
+Wire Wire Line
+	4500 3800 5400 3800
+Wire Wire Line
+	5400 3600 5400 3800
+Connection ~ 5400 3800
+Wire Wire Line
+	5400 3800 7500 3800
+Wire Wire Line
+	3950 2150 4500 2150
+Wire Wire Line
+	7000 2100 6650 2100
+Wire Wire Line
+	6650 2100 6650 1250
+Wire Wire Line
+	4500 1250 6650 1250
+NoConn ~ 5900 2400
+NoConn ~ 5350 2600
+Wire Wire Line
+	7000 2600 6150 2600
+Wire Wire Line
+	6150 2600 6150 2700
+Wire Wire Line
+	6150 2700 5900 2700
+NoConn ~ 7000 2400
+NoConn ~ 5900 2900
+Wire Wire Line
+	4000 4250 4300 4250
+Wire Wire Line
+	4300 4250 4300 1050
+Wire Wire Line
+	4300 1050 7600 1050
+Wire Wire Line
+	7600 1050 7600 1250
+Connection ~ 7600 1250
+$Comp
+L Connector:Conn_01x03_Male J4
+U 1 1 62D53D5C
+P 3300 3150
+F 0 "J4" H 3272 3174 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 3650 2950 50  0000 R CNN
+F 2 "" H 3300 3150 50  0001 C CNN
+F 3 "~" H 3300 3150 50  0001 C CNN
+	1    3300 3150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3000 1200 1700
+Wire Wire Line
+	1200 1700 1650 1700
+Wire Wire Line
+	1650 1700 1650 1850
+Wire Wire Line
+	1450 1850 1450 1800
+Wire Wire Line
+	1450 1800 1300 1800
+Wire Wire Line
+	1300 1800 1300 3100
+Wire Wire Line
+	1300 3100 1200 3100
+Wire Wire Line
+	1550 2450 1550 2550
+Wire Wire Line
+	1550 2550 1400 2550
+Wire Wire Line
+	1400 2550 1400 3200
+Wire Wire Line
+	1400 3200 1200 3200
+$Comp
+L Relay:FINDER-40.11 K1
+U 1 1 62D66438
+P 1750 2150
+F 0 "K1" H 1300 2150 50  0000 R CNN
+F 1 "FINDER-40.11" H 1500 1850 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_40.11" H 2890 2110 50  0001 C CNN
+F 3 "https://www.finder-relais.net/de/finder-relais-serie-40.pdf" H 1750 2150 50  0001 C CNN
+	1    1750 2150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 62D69782
+P 2100 2850
+F 0 "R1" V 1893 2850 50  0000 C CNN
+F 1 "R" V 1984 2850 50  0000 C CNN
+F 2 "" V 2030 2850 50  0001 C CNN
+F 3 "~" H 2100 2850 50  0001 C CNN
+	1    2100 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC141 Q1
+U 1 1 62D6B6A6
+P 2450 2850
+F 0 "Q1" H 2641 2896 50  0000 L CNN
+F 1 "BC141" H 2641 2805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 2650 2775 50  0001 L CIN
+F 3 "http://www.farnell.com/datasheets/296634.pdf" H 2450 2850 50  0001 L CNN
+	1    2450 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:DIODE D1
+U 1 1 62D6BFF6
+P 2550 2150
+F 0 "D1" V 2596 2022 50  0000 R CNN
+F 1 "DIODE" V 2505 2022 50  0000 R CNN
+F 2 "" H 2550 2150 50  0001 C CNN
+F 3 "~" H 2550 2150 50  0001 C CNN
+	1    2550 2150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2550 2350 2550 2550
+Wire Wire Line
+	1950 2450 1950 2550
+Wire Wire Line
+	1950 2550 2550 2550
+Connection ~ 2550 2550
+Wire Wire Line
+	2550 2550 2550 2650
+Wire Wire Line
+	1950 1850 1950 1700
+Wire Wire Line
+	1950 1700 2550 1700
+Wire Wire Line
+	2550 1700 2550 1950
+Wire Wire Line
+	2550 1700 3000 1700
+Connection ~ 2550 1700
+Wire Wire Line
+	3000 3050 3000 1700
+Wire Wire Line
+	3000 3050 3100 3050
+$Comp
+L Connector:Screw_Terminal_01x03 J5
+U 1 1 62D55F5B
+P 1000 3100
+F 0 "J5" H 1150 3100 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 1000 2850 50  0000 C CNN
+F 2 "" H 1000 3100 50  0001 C CNN
+F 3 "~" H 1000 3100 50  0001 C CNN
+	1    1000 3100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3050 2550 3250
+Wire Wire Line
+	2550 3250 3100 3250
+Wire Wire Line
+	1950 2850 1950 3150
+Wire Wire Line
+	1950 3150 3100 3150
+$EndSCHEMATC
