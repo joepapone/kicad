@@ -1,4 +1,4 @@
-update=Tue 19 Jul 2022 22:46:18 WEST
+update=Sat 23 Jul 2022 11:49:41 WEST
 version=1
 last_client=kicad
 [general]
@@ -12,16 +12,6 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
-[schematic_editor]
-version=1
-PageLayoutDescrFile=/home/joe/KiCAD/lib/Layout/Brothers.kicad_wks
-PlotDirectoryName=/home/joe/KiCAD/Scale/
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=/home/joe/KiCAD/lib/Layout/Brothers.kicad_wks
@@ -246,3 +236,13 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
+[schematic_editor]
+version=1
+PageLayoutDescrFile=/home/joe/KiCAD/lib/Layout/Brothers.kicad_wks
+PlotDirectoryName=./
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
